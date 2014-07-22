@@ -1,0 +1,11 @@
+Common kernel
+
+The goal is to accomodate diversity among hardware while keeping a slim and easily maintainable codebase. Both CPU vector instructions and GPU kernels will be targeted.
+This is achieved by applying a combination of templating and overloading techniques to abstract the backend out of applied algorithms.
+By separating the backend, the responsibility of developing and maintaining the intrinsics can be decoupled from algorithm design.
+
+1. Demonstrate abstraction of types and mathematical functions using template traits.
+2. Implement different CPU vector backends, including Vc (http://code.compeng.uni-frankfurt.de/projects/vc) and Intel's Cilk Plus array notation.
+3. Implement a GPU backend to run in CUDA C.
+4. Apply the backends to an algorithm and verify identical outputs.
+5. Discuss advantages and disadvantages of decoupling algorithm and backend. Possibilities for further abstraction?
